@@ -9,6 +9,7 @@
   <body>
     <script src="js/jquery-3.1.1.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
   </body>
 </html>
