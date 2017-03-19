@@ -22,20 +22,19 @@ class connect {
 			echo 'ERROR: ' . $e->getMessage();
 		}
 
-  function create(){
-
+  // function query
+  // queries db with sql statement
+  //
+  // ex:
+  // $this->conn->insertData("INSERT INTO customer_log (action, portal_id,) VALUES (:action, :portal_id)", array(':action' => 2, ':portal_id' => 4));
+  function query($executeString, $fieldArray){
+    try {
+        $data = $this->conn->prepare($executeString);
+			  $data->execute($fieldArray);
+  			return true;
+  		} catch(PDOException $e) {
+  			echo 'Error: ' . $e->getMessage();
+  			return false;
+  		}
   }
-
-  function read(){
-
-  }
-
-  function update(){
-
-  }
-
-  function delete(){
-    
-  }
-
 }
