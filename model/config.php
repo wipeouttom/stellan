@@ -3,9 +3,9 @@
  * config class.
  */
 class config {
-	public $host = '';
-	public $user = '';
-	public $password = '';
-	public $db = '';
+	public $host = 'localhost';
+	public $user = 'admin';
+	public $password = 'WeYn3m1zPQMIAAGW';
+	public $db = 'stellan';
 	public $dbprefix = '';
 }
