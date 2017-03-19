@@ -7,3 +7,14 @@
 ### How to pull:
 > 1. git pull upstream master (Inn0's version)   
 > 1. git pull origin master (RainbowOverderp's version)
+
+to do:
+- crud functions for db  
+- account system  
+- forum system  
+- compo generator
+
+<?php
+class test {
+
+}
