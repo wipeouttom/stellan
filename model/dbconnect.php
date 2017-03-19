@@ -1,5 +1,5 @@
 <?php
-require_once('configuration.php');
+require_once('config.php');
 /**
  * connect class.
  */
