@@ -26,7 +26,7 @@ class connect {
   // queries db with sql statement
   //
   // ex:
-  // $this->conn->insertData("INSERT INTO customer_log (action, portal_id,) VALUES (:action, :portal_id)", array(':action' => 2, ':portal_id' => 4));
+  // $this->conn->query("INSERT INTO customer_log (action, portal_id,) VALUES (:action, :portal_id)", array(':action' => 2, ':portal_id' => 4));
   function query($executeString, $fieldArray){
     try {
         $data = $this->conn->prepare($executeString);
