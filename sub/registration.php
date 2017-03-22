@@ -26,16 +26,31 @@
     </nav>
 
     <div class="container" style="margin-top:80px;color:black;">
-      <form action="/action_page.php">
+      <form action="../model/register.php">
         <div class="form-group">
-          <label for="email">Email address:</label>
-          <input type="email" class="form-control" id="email">
+          <label for="userName">Username:</label>
+          <input type="userName" class="form-control" id="text" name="userName">
         </div>
         <div class="form-group">
-          <label for="pwd">Password:</label>
-          <input type="password" class="form-control" id="pwd">
+          <label for="email">Email adress:</label>
+          <input type="email" class="form-control" id="email" name="email">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <div class="form-group">
+          <label for="pwd">Wachtwoord:</label>
+          <input type="pwd" class="form-control" id="pwd" name="pwd">
+        </div>
+        <div class="form-group">
+          <label for="gender">Geslacht:</label>
+          <select class="form-control" id="gender" name="gender">
+            <option>Man</option>
+            <option>Vrouw</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="dateOfBirth">Geboortedatum:</label>
+          <input type="dateOfBirth" class="form-control" id="date" name="dateofbirth">
+        </div>
+        <button type="submit" class="btn btn-default">Register</button>
       </form>
     </div>
 
