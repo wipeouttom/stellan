@@ -21,7 +21,7 @@
             </button>
 
           <!-- name of the website on the left side of the navbar -->
-          <a class="navbar-brand">StelLAN</a>
+          <a href="index.php" class="navbar-brand" style="color:white;">Stel<strong style="color:red;">LAN<strong></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -54,7 +54,7 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Sign in</a></li>
+          <li><a href="sub/registration.php">Inloggen</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
             <ul class="dropdown-menu">
