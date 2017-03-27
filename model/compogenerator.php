@@ -1,41 +1,33 @@
 <?php
 class compogenerator{
-  public $clan_ar;
-  public $pool1_ar;
-  public $pool2_ar;
-  public $round;
+  private $clan_ar;
+  private $pool1_ar;
+  private $pool2_ar;
   private $game;
 
-  function __construct($clan_ar, $game, $pool1_ar, $pool2_ar, $round){
+  function __construct($clan_ar, $game, $pool1_ar, $pool2_ar){
     $this->clan_ar = $clan_ar;
     $this->game = $game;
-    if(isset($pool1_ar)){
+    if(isset($pool1_ar && $pool2_ar)){
       $this->pool1_ar = $pool1_ar;
       $this->pool2_ar = $pool2_ar;
     }
-    if(isset($round)){
-      $this->round = $round++;
-    }
-    else{
-      $this->round = 1;
-    }
   }
 
-  function pool(){
+  function poolGen(){
     $bot_ar = array("BOT", "BOT", "BOT", "BOT", "BOT", "BOT", "BOT", "BOT", "BOT", "BOT", "BOT", "BOT", "BOT", "BOT", "BOT", "BOT");
     $poolable_ar = array_replace($bot_ar, $this->clan_ar);
     shuffle($poolable_ar);
     $this->pool1_ar = array_slice($poolable_ar, 0, 8);
     $this->pool2_ar = array_slice($poolable_ar, 8, 8);
+    $pools = array($this->pool1_ar, $this->pool2_ar);
+    return $pools;
   }
 
-  function round(){
+  function roundGen(){
     shuffle($this->pool1_ar);
     shuffle($this->pool2_ar);
     return "
-      <table>
-        <tr>
-          <th rowspan='6'>ROUND " . $this->round . "</th>
           <th colspan='6'>Pool 1</th>
           <th colspan='6'>Pool 2</th>
         </tr>
@@ -111,6 +103,5 @@ class compogenerator{
         </tr>
       </table>
     ";
-    $this->round++;
   }
 }
